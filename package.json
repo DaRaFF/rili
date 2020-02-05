@@ -1,0 +1,37 @@
+{
+  "name": "rili",
+  "version": "0.0.0-development",
+  "description": "",
+  "main": "get-version.js",
+  "bin": "./cli-get-version.js",
+  "scripts": {
+    "test": "tap test/*.js",
+    "test:watch": "tap --watch test/*.js"
+  },
+  "author": "Ralph Meier",
+  "license": "ISC",
+  "dependencies": {
+    "configstore": "^5.0.0",
+    "eslint": "^6.8.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5",
+    "tab": "^1.0.0",
+    "yargs": "^12.0.2"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DaRaFF/rili.git"
+  },
+  "devDependencies": {
+    "tap": "^14.10.5"
+  },
+  "publishConfig": {
+    "private": "true"
+  },
+  "release": {
+    "extends": "@livingdocs/semantic-release-presets/github-verify"
+  }
+}
