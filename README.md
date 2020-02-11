@@ -1,13 +1,23 @@
 # Scope
 
-add a release-notes patch to the release-notes of Livingdocs.
-
-Even when it's public, this is a higly individual repository and is useless for others to use.
+Rili is a tool to support a release manager with useful information.
+At the moment it's under heavy construction.
 
 # Example
 
-### via CLI
-
+### Get the latest tag of a branch
 
 ```bash
+// add a json config file to ~/.config/configstore/rili.json
+{
+  "versions": [
+    { "owner": "livingdocsIO", "repo": "livingdocs-server", "branch": "master"},
+    { "owner": "livingdocsIO", "repo": "livingdocs-editor", "branch": "master"},
+    { "owner": "livingdocsIO", "repo": "livingdocs-server", "branch": "release-2019-12"},
+    { "owner": "livingdocsIO", "repo": "livingdocs-editor", "branch": "release-2019-12"}
+  ]
+}
+
+// get the latest tag of a branch from the config
+node cli-get-version-from-config.js --token=<your-github-token>
 ```
