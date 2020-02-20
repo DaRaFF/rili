@@ -3,7 +3,7 @@
   "version": "0.0.0-development",
   "description": "",
   "main": "get-version.js",
-  "bin": "./cli-get-version.js",
+  "bin": "./cli-get-version-from-config.js",
   "scripts": {
     "test": "tap test/*.js",
     "test:watch": "tap --watch test/*.js"
