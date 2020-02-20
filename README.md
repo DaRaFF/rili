@@ -11,8 +11,10 @@ At the moment it's under heavy construction.
 // add a json config file to ~/.config/configstore/rili.json
 {
   "versions": [
+    { "header": "UPSTREAM master" },
     { "owner": "livingdocsIO", "repo": "livingdocs-server", "branch": "master"},
     { "owner": "livingdocsIO", "repo": "livingdocs-editor", "branch": "master"},
+    { "header": "UPSTREAM release-2019-12" },
     { "owner": "livingdocsIO", "repo": "livingdocs-server", "branch": "release-2019-12"},
     { "owner": "livingdocsIO", "repo": "livingdocs-editor", "branch": "release-2019-12"}
   ]

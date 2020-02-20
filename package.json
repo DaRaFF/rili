@@ -11,6 +11,7 @@
   "author": "Ralph Meier",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^3.0.0",
     "configstore": "^5.0.0",
     "eslint": "^6.8.0",
     "lodash": "^4.17.15",
