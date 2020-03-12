@@ -21,5 +21,6 @@ At the moment it's under heavy construction.
 }
 
 // get the latest tag of a branch from the config
+npx github:daraff/rili --token=<your-github-token>
 node cli-get-version-from-config.js --token=<your-github-token>
 ```
