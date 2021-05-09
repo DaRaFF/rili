@@ -4,6 +4,7 @@ const gitGetTags = require('./lib/git/get_tags')
 
 // TODO: do not only search by the latest commit, go back in history until you find a tag
 module.exports = async ({token, owner, repo, branch} = {}) => {
+  console.log('get-version')
   const tags = await gitGetTags({owner, repo, token})
   const sha = await gitGetShaByBranch({owner, repo, token, branch})
 

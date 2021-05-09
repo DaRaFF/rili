@@ -16,7 +16,7 @@ const chalk = require('chalk');
 //   ]
 // }
 module.exports = async ({token} = {}) => {
-
+  console.log('get-version-from-config')
   const config = new Configstore(packageJson.name)
 
   const versions = config.get('versions')
