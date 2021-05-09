@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-console.log('start cli-get-version-from-config')
 const argv = require('yargs')
   .demandOption(['token'])
   .help(false)
