@@ -1,8 +1,5 @@
-const Configstore = require('configstore')
-const packageJson = require('./package.json')
-const getVersion = require('./get-version')
+const api = require('./api')
 const tab = require('tab')
-const chalk = require('chalk');
 
 // Input comes from config file like this:
 // {
@@ -16,18 +13,8 @@ const chalk = require('chalk');
 //   ]
 // }
 module.exports = async ({token} = {}) => {
-  const config = new Configstore(packageJson.name)
 
-  const versions = config.get('versions')
-
-  // only make x parallel requests?
-  const versionsResult = await Promise.all(
-    versions.map(async (v) => {
-      if (v.header) return ['', chalk.green(v.header), '', '']
-      const version = await getVersion({token, owner: v.owner, repo: v.repo, branch: v.branch})
-      return [v.owner, v.repo, v.branch, version]
-    })
-  )
+  const versionsResult = await api.getVersionFromConfig({token})
 
   // return json or tabbed table?
   // emit table on cli script and return here a json format?

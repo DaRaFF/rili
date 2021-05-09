@@ -2,7 +2,7 @@
   "name": "rili",
   "version": "0.0.0-development",
   "description": "",
-  "main": "get-version.js",
+  "main": "api.js",
   "bin": "./cli-get-version-from-config.js",
   "scripts": {
     "test": "tap test/*.js",

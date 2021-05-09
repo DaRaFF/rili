@@ -4,9 +4,9 @@ const argv = require('yargs')
   .help(false)
   .version(false)
   .argv
-const getVersion = require('./get-version')
+const api = require('./api')
 
-getVersion(argv)
+api.getVersion(argv)
   .then((message) => {
     console.log(message)
   })
